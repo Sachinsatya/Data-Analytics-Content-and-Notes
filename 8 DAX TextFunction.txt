@@ -1,0 +1,27 @@
+DAX TEXT functions 
+
+1. CONCATENATEX: The CONCATENATEX function returns a concatenated text string from a column of data, separated by a specified delimiter. 
+= CONCATENATEX(Products, [ProductName], ", ")
+
+= LEFT(Products[ProductName], 3)
+= RIGHT(Products[ProductName], 3)
+
+4. SUBSTITUTE: The SUBSTITUTE function replaces a specified text string with another text string. For example, the following DAX formula replaces all instances of the word "North" with the word "South" in the "Region" column:
+= SUBSTITUTE(Sales[Region], "North", "South")
+
+= UPPER(Products[ProductName])
+= SEARCH("Red", Products[ProductName])
+= LEN(Products[ProductName])
+= TRIM(Products[ProductName])
+= CONCATENATE(Products[ProductName], " - ", Products[Color])
+= FIND("is", "This is a test")
+= MID("This is a test", 2, 3)
+
+
+
+UBSTITUTEWITHINDEX: The SUBSTITUTEWITHINDEX function replaces a specified text string with another text string, but only for the first occurrence, second occurrence, and so on. For example, the following DAX formula replaces the second occurrence of the word "North" with the word "South" in the "Region" column:
+= SUBSTITUTEWITHINDEX(Sales[Region], "North", "South", 2)
+
+
+SUBSTITUTEALL: The SUBSTITUTEALL function replaces all occurrences of a specified text string with another text string. 
+= SUBSTITUTEALL(Sales[Region], "North", "South")

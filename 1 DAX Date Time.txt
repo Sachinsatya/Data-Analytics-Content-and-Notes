@@ -1,0 +1,117 @@
+DAX Functions - GPT
+-------------------
+1. TODAY: Returns the current date, based on the system clock. - TODAY( )
+
+2. NOW: Returns the current date and time, based on the system clock. - NOW()
+
+3. DATE: Returns a date value from a year, month, and day.  
+-Example: DATE(2021, 5, 1) returns May 1, 2021.
+
+4. YEAR: Returns the year component of a date.
+-YEAR([Date]) returns the year of the date in the [Date] column.
+
+5. MONTH: Returns the month component of a date.
+-Example: MONTH([Date]) returns the month of the date in the [Date] column.
+
+6. DAY: Returns the day component of a date.
+Example: DAY([Date]) returns the day of the date in the [Date] column.
+
+7. EOMONTH: Returns the last day of the month that is a specified number of months before or after a given date.
+Example: EOMONTH([Date], -1) returns the last day of the previous month for the date in the [Date] column.
+
+8. DATEADD: Adds a specified number of intervals to a date.
+-Example: DATEADD([Date], 1, MONTH) adds one month to the date in the [Date] column.
+
+9. DATEDIFF: Returns the difference between two dates, in a specified time unit.
+-Example: DATEDIFF([Start Date], [End Date], DAY) returns the number of days between the [Start Date] and [End Date] columns.
+
+10. HOUR: Returns the hour component of a time.
+Example: HOUR([Time]) returns the hour of the time in the [Time] column.
+
+11. MINUTE: Returns the minute component of a time.
+Example: MINUTE([Time]) returns the minute of the time in the [Time] column.
+
+12. SECOND: Returns the second component of a time.
+Example: SECOND([Time]) returns the second of the time in the [Time] column.
+
+13. TIME: Returns a time value from an hour, minute, and second.
+Example: TIME(12, 30, 0) returns 12:30 PM.
+
+14.CALENDAR: Creates a table of dates between a start and end date.
+
+Example: CALENDAR(DATE(2022, 1, 1), DATE(2022, 12, 31))
+
+15.TOTALYTD: Calculates a year-to-date total for a measure.
+
+Example: TOTALYTD(SUM('Table'[Sales]), 'Table'[Date], "6/30")
+
+16.SAMEPERIODLASTYEAR(): Returns a table of values for the same time period in the previous year. For example, SAMEPERIODLASTYEAR('Date'[Date]) returns a table of dates that match the same time period in the previous year.
+
+SAMEPERIODLASTYEAR: Returns a table of values for the same time period in the previous year.
+Example: CALCULATE(SUM('Table'[Sales]), SAMEPERIODLASTYEAR('Table'[Date]))
+
+
+Today's date is: = TODAY()
+
+Current date and time are: = NOW()
+
+Date value for January 1, 2022 is: = DATE(2022, 1, 1)
+
+The year for 01/01/2022 is: = YEAR("01/01/2022")
+
+The year for 01/01/2022 is: = YEAR("01/01/2022")
+
+The month for 01/01/2022 is: = MONTH("01/01/2022")
+
+The day for 01/01/2022 is: = DAY("01/01/2022")
+
+The month for 01/01/2022 is: = MONTH("01/01/2022")
+
+The day for 01/01/2022 is: = DAY("01/01/2022")
+
+Number of days between 01/01/2022 and 01/15/2022 is: = DATEDIFF("01/01/2022", "01/15/2022", DAY)
+
+The last day of the month for 01/15/2022 is: = EOMONTH("01/15/2022")
+
+
+Yesterday's date was: = TODAY() - 1
+
+
+Current date and time, one hour ago: = NOW() - TIME(1,0,0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

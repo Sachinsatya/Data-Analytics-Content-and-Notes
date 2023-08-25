@@ -1,0 +1,34 @@
+ DAX Information Function 
+
+1.COUNT: The COUNT function returns the number of rows in a table or column
+
+ COUNT(Sales)
+
+2. DISTINCTCOUNT: The DISTINCTCOUNT function returns the number of unique values in a column.
+DISTINCTCOUNT(Sales[CustomerKey])
+
+
+3.ISBLANK: The ISBLANK function returns a Boolean value indicating whether a value is blank or null. 
+IF(ISBLANK(Sales[SalesAmount]), 1, 0)
+
+4.ISTEXT: The ISTEXT function returns a Boolean value indicating whether a value is a text string
+IF(ISTEXT(Sales[ProductName]), 1, 0)
+
+5. CONCATENATE: The CONCATENATE function combines two or more text strings into a single string
+CONCATENATE(Customers[FirstName], " ", Customers[LastName])
+
+6.ISNUMBER: The ISNUMBER function returns TRUE if the specified expression is a number, and FALSE otherwise
+ISNUMBER(Sales[SalesAmount])
+
+COLUMNS: The COLUMNS function returns a table that contains the column names of a table or an expression that returns a table
+COLUMNS(Sales)
+
+7.ISNUMBER: The ISNUMBER function returns TRUE if a value is a number. It takes one argument:
+ISNUMBER: The ISNUMBER function returns TRUE if a value is a number. It takes one argument:
+
+8. SELECTEDVALUE: The SELECTEDVALUE function returns the value of a column if it has only one distinct value in the current filter context. It takes one argument: the column to return the selected value from. For example, 
+
+SELECTEDVALUE(Sales[Region])
+
+9. USERNAME: The USERNAME function returns the Windows login name of the current user. 
+USERNAME()

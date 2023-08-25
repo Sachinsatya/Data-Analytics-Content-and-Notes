@@ -1,0 +1,32 @@
+DAX Maths Functions 
+
+Aggrigate functions 
+
+= SUM(Sales[SalesAmount])
+= AVERAGE(Sales[SalesAmount])
+= MIN(Sales[SalesAmount])
+= MAX(Sales[SalesAmount])
+= ROUND(Sales[SalesAmount], 2)
+= ABS(Sales[ActualSalesAmount] - Sales[Budget])
+= SQRT(Sales[SalesAmount])
+= ROUNDUP(Sales[SalesAmount], 2)
+= ROUNDDOWN(Sales[SalesAmount], 2)
+= EXP(Sales[SalesAmount])
+= LOG(Sales[SalesAmount], 10)
+= RAND()
+= STD()
+
+= INT(Sales[SalesAmount])
+= MOD(Sales[SalesAmount], 10)
+= RAND() * Sales[SalesAmount]
+= SIGN(Sales[SalesAmount])
+= POWER(Sales[SalesAmount], 2)
+
+TRIGNO
+
+= SIN(Table1[Angle])
+= COS(Table1[Angle])
+= TAN(Table1[Angle])
+= ASIN(Table1[Sine])
+= ACOS(Table1[Cosine])
+= ATAN(Table1[Tangent])

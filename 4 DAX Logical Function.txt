@@ -1,0 +1,33 @@
+DAX Logical functions 
+
+1. IF: The IF function returns one value if a condition is true, and another value if the condition is false
+Commission = IF(Sales[SalesAmount] > Sales[Quota], Sales[SalesAmount] * 0.1, 0)
+
+2.AND: The AND function returns TRUE if all of its arguments evaluate to TRUE, and FALSE otherwise. 
+FILTER(Sales, AND(Sales[Region] = "West", Sales[Year] = 2022))
+
+
+3. OR: The OR function returns TRUE if any of its arguments evaluate to TRUE, and FALSE otherwise. 
+FILTER(Sales, OR(Sales[Region] = "West", Sales[Region] = "South"))
+
+4.NOT: The NOT function returns the opposite of the value of its argument. If the argument is TRUE, it returns FALSE,
+SalesBelowQuota = CALCULATE(COUNT(Sales[SalesAmount]), NOT(Sales[SalesAmount] > Sales[Quota]))
+
+
+5. SWITCH: The SWITCH function allows you to test multiple conditions and return a value based on the first condition that is true.
+
+= SWITCH(TRUE(),
+         Sales[SalesAmount] > 100, "High",
+         Sales[SalesAmount] > 50, "Medium",
+         Sales[SalesAmount] <= 50, "Low")
+
+6. = IFERROR(Sales[SalesAmount] / Expenses[ExpenseAmount], 0)
+
+7. IFBLANK: The IFBLANK function allows you to handle blank values in expressions by returning a specified value. 
+= IFBLANK(Expenses[ExpenseAmount], 0) / Sales[SalesAmount]
+
+8.CONTAINS: The CONTAINS function tests whether a column contains a specified value. It takes two arguments: 
+= CONTAINS(Sales, Sales[Product], "Coffee")
+
+
+= IF(Sales[SalesAmount] > 100, FALSE(), TRUE())

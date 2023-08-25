@@ -1,0 +1,88 @@
+DAX Time Intelligence Functions 
+
+1. TOTALYTD: Calculates the total value of a measure from the beginning of the year to the current date.
+Example: TOTALYTD(SUM('Table'[Sales]), 'Table'[Date])
+
+2.TOTALQTD: Calculates the total value of a measure from the beginning of the quarter to the current date.
+Example: TOTALQTD(SUM('Table'[Sales]), 'Table'[Date])
+
+3.TOTALMTD: Calculates the total value of a measure from the beginning of the month to the current date.
+Example: TOTALMTD(SUM('Table'[Sales]), 'Table'[Date])
+
+4. SAMEPERIODLASTYEAR: Returns a table of values for the same time period in the previous year.
+Example: CALCULATE(SUM('Table'[Sales]), SAMEPERIODLASTYEAR('Table'[Date]))
+
+5. DATESYTD: Returns a table of dates from the beginning of the year to the current date.
+Example: DATESYTD('Table'[Date])
+
+6. DATESQTD: Returns a table of dates from the beginning of the quarter to the current date.
+Example: DATESQTD('Table'[Date])
+
+7. DATESMTD: Returns a table of dates from the beginning of the month to the current date.
+Example: DATESMTD('Table'[Date])
+
+8. PREVIOUSDAY: Returns the date value for the previous day.
+Example: CALCULATE(SUM('Table'[Sales]), PREVIOUSDAY('Table'[Date]))
+
+9.PREVIOUSMONTH: Returns the date value for the same day in the previous month.
+Example: CALCULATE(SUM('Table'[Sales]), PREVIOUSMONTH('Table'[Date]))
+
+10.YOY: Calculates the year-over-year change for a measure.
+Example: DIVIDE(SUM('Table'[Sales]), CALCULATE(SUM('Table'[Sales]), PREVIOUSYEAR('Table'[Date]))) - 1
+
+11.FIRSTDATE: Returns the earliest date in a given column.
+Example: FIRSTDATE('Table'[Date])
+
+12.LASTDATE: Returns the latest date in a given column.
+Example: LASTDATE('Table'[Date])
+
+13 FIRSTNONBLANK: Returns the first non-blank value for a given expression and range of dates.
+Example: FIRSTNONBLANK('Table'[Sales], 'Table'[Date])
+
+14. LASTNONBLANK: Returns the last non-blank value for a given expression and range of dates.
+
+
+15. CLOSINGBALANCEYEAR: Calculates the closing balance for a given year.
+Example: CLOSINGBALANCEYEAR('Table'[Sales], 'Table'[Date], DATE(2022, 12, 31))
+
+16 OPENINGBALANCEMONTH: Returns the opening balance for a selected month.
+Example: OPENINGBALANCEMONTH(SUM('Table'[Sales]), 'Table'[Date])
+
+17. PARALLELPERIOD: Returns a table of values for the same time period in the previous or next time period based on the specified offset.
+Example: CALCULATE(SUM('Table'[Sales]), PARALLELPERIOD('Table'[Date], -1, YEAR))
+
+
+18. NEXTDAY: Returns the date that is one day after the selected date.
+Example: NEXTDAY('Table'[Date])
+
+19. PREVIOUSDAY: Returns the date that is one day before the selected date.
+Example: PREVIOUSDAY('Table'[Date])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

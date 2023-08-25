@@ -1,0 +1,40 @@
+DAX Stats Functions 
+
+= AVERAGE(Sales[SalesAmount])
+= COUNT(Sales[SalesAmount])
+= MAX(Sales[SalesAmount])
+= MIN(Sales[SalesAmount])
+= SUM(Sales[SalesAmount])
+= VAR(Sales[SalesAmount])
+= STDEV(Sales[SalesAmount])
+= MEDIAN(Sales[SalesAmount])
+= MEDIAN(Sales[SalesAmount])
+
+SUMX: The SUMX function returns the sum of a calculated expression for each row in a table
+
+For example, the following DAX formula calculates the total sales amount for each product, and then returns the sum of those values:
+
+= SUMX(Products, [SalesAmount])
+
+AVERAGEX: The AVERAGEX function returns the average of a calculated expression for each row in a table. 
+= AVERAGEX(Products, [SalesAmount])
+
+MINX: The MINX function returns the minimum value of a calculated expression for each row in a table. 
+= MINX(Products, [SalesAmount])
+
+COUNTX: The COUNTX function returns the number of non-blank values of a calculated expression for each row in a table. 
+= COUNTX(Products, [SalesTransactionID])
+
+DISTINCTCOUNT: The DISTINCTCOUNT function returns the number of unique values in a column of data. 
+= DISTINCTCOUNT(Sales[CustomerID])
+
+RANKX: The RANKX function returns the rank of a value within a column of data. 
+= RANKX(Products, [SalesAmount], ,DESC,Dense)
+
+
+PERCENTILEX: The PERCENTILEX function returns the value at a specified percentile within a column of data.
+= PERCENTILEX.Inc(Products, [SalesAmount], 0.9)
+
+
+QUARTILE: The QUARTILE function returns the value at a specified quartile within a column of data
+QUARTILE: The QUARTILE function returns the value at a specified quartile within a column of data

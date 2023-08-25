@@ -1,0 +1,35 @@
+DAX Filter Functions 
+
+1. FILTER: This function allows you to filter a table based on one or more conditions. For example, to filter a sales table to show only sales for the year 2021, you can use the following expression:
+
+FILTER(Sales, Sales[Year] = 2021)
+
+2. CALCULATE: This function allows you to modify the context in which a calculation is performed. For example, to calculate the total sales for the year 2021, you can use the following expression:
+
+CALCULATE(SUM(Sales[SalesAmount]), Sales[Year] = 2021)
+
+3. ALL: This function allows you to remove one or more filters from a table or column. For example, to show the total sales for all years, you can use the following expression:
+
+CALCULATE(SUM(Sales[SalesAmount]), ALL(Sales[Year]))
+
+4. TOPN: This function allows you to return the top N rows from a table based on a specified column. For example, to show the top 10 products by sales amount, you can use the following expression:
+
+TOPN(10, Sales, Sales[SalesAmount])
+
+5. RELATEDTABLE: This function allows you to filter a related table. For example, if you have a product table related to a sales table, you can use the following expression to filter the product table based on the selected year:
+
+RELATEDTABLE(Product), Sales[Year] = 2021)
+
+6. the unique values of a column in the current filter context. It takes one argument: the column to return unique values from. For example, the following DAX formula returns a table of unique values in the 'Region' column:
+
+VALUES(Sales[Region])
+
+
+CALCULATETABLE(Sales, Sales[Region] = "West")
+
+FILTERS()
+
+CALCULATE(SUM(Sales[SalesAmount]), USERELATIONSHIP(Sales[RegionKey], Regions[RegionKey], "Alternate"))
+
+
+VALUESSELECTED(Sales[Region])
